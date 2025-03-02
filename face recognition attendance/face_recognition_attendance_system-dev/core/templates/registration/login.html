@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* Set background color, text color, and center-align all elements */
+        body {
+            background-color:-webkit-linear-gradient(left, #3931af, #00c6ff);
+            background-image: -webkit-linear-gradient(left, rgb(57, 49, 175), rgb(0, 198, 255));
+            background-position-x: initial;
+            background-position-y: initial;
+            background-size: initial;
+            background-repeat: initial;
+            background-attachment: initial;
+            background-origin: initial;
+            background-clip: initial;
+            background-color: initial;; /* Light blue background */
+            color: #333; /* Dark gray text color */
+            text-align: center; /* Center align all text */
+            font-family: Arial, sans-serif; /* Optional font */
+            height: 100vh; /* Full viewport height */
+            display: flex; /* Flexbox layout */
+            flex-direction: column; /* Align items vertically */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        /* Style the h3 element */
+        h3 {
+            color: white; /* White text */
+            padding: 10px; /* Padding inside the h3 */
+            border-radius: 5px; /* Optional: Rounded corners */
+            margin-bottom: 20px; /* Space below the h3 */
+            width: 100%; /* Full width of the page */
+            max-width: 400px; /* Limit h3 width */
+            box-sizing: border-box; /* Ensure padding is inside the width */
+            font-size: 40px;
+            text-shadow:3px 2px 2px black;
+            font-style:bold;
+        }
+
+        /* Style the form */
+        form {
+            background-color: #fff; /* White background for the form */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Light shadow */
+            max-width: 400px; /* Limit form width */
+            width: 100%; /* Full width of the form */
+        }
+
+        /* Style the submit button */
+        input[type="submit"] {
+            background-color: #007bff; /* Blue button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform:scale(1.2);
+            transition:0.5s ease; }
+    </style>
+</head>
+<body>
+    <h3>Login</h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
+
